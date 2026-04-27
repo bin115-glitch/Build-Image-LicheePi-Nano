@@ -1,5 +1,18 @@
 # Lichee Pi Nano Kernel Build
 
+## 📌 Overview
+
+* Built on Kali Linux
+* Requires **GCC 6.x** (newer GCC may fail with legacy kernel)
+* This repository contains only:
+
+  * `output/`
+  * `.config`
+
+👉 Build artifacts generated from: https://github.com/robot9706/lichee-pi-nano-linux
+
+---
+
 ## 📦 Toolchain
 
 * GCC: **Linaro 6.3.1 (2017.05)**
@@ -10,20 +23,10 @@
 
 ## 🧰 Dependencies
 
-Cài đầy đủ các thư viện cần thiết:
-
 ```bash
 sudo apt update
 sudo apt install build-essential bc bison flex libssl-dev libncurses-dev
 ```
-
-### 📌 Giải thích nhanh
-
-* `build-essential` → gcc, make
-* `bc` → cần cho kernel build
-* `bison`, `flex` → parser (Kconfig)
-* `libssl-dev` → crypto
-* `libncurses-dev` → menuconfig (nếu dùng)
 
 ---
 
@@ -41,7 +44,7 @@ make -j$(nproc)
 
 ## 📁 Output
 
-Sau khi build thành công:
+After a successful build:
 
 ```
 arch/arm/boot/zImage
@@ -54,23 +57,18 @@ arch/arm/boot/dts/*.dtb
 
 ### 🔹 Build Success
 
-<img width="1728" height="1000" alt="3" src="https://github.com/user-attachments/assets/42a4d2c8-fe89-4323-baed-5ccfb6e5e826" />
-
+<img width="1728" height="1000" alt="3" src="https://github.com/user-attachments/assets/0de8f2ed-e196-4d4b-b8d6-d590d69114b2" />
 
 ### 🔹 zImage Generated
 
-<img width="962" height="146" alt="2" src="https://github.com/user-attachments/assets/0f98b169-b4a8-49a9-9014-1b82092df2d4" />
+<img width="962" height="146" alt="2" src="https://github.com/user-attachments/assets/57f5e281-ef73-4509-85cf-6eeb3e892958" />
 
 ---
 
 ## 📌 Notes
 
-* Build thành công trên Kali Linux
-* Bắt buộc dùng **GCC 6.x** (GCC mới sẽ lỗi)
-* Repo này chỉ chứa:
-
-  * `output/`
-  * `.config`
-    → để chứng minh build thành công
+* Kernel built successfully using GCC 6.x toolchain
+* Output files are extracted and stored in `output/`
+* Suitable for Lichee Pi Nano (Allwinner V3s)
 
 ---
