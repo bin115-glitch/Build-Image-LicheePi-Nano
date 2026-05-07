@@ -62,6 +62,7 @@ arch/arm/boot/dts/*.dtb
 ### 🔹 zImage Generated
 
 <img width="962" height="146" alt="2" src="https://github.com/user-attachments/assets/57f5e281-ef73-4509-85cf-6eeb3e892958" />
+<img width="853" height="477" alt="image" src="https://github.com/user-attachments/assets/754ae6c3-b02b-491e-93dc-14e290cc0476" />
 
 ---
 
