@@ -73,3 +73,20 @@ arch/arm/boot/dts/*.dtb
 * Suitable for Lichee Pi Nano (Allwinner V3s)
 
 ---
+## 4G Lite trên lichee pi nano
+```
+Board không có Ethernet và WiFi nên một hướng kết nối Internet khả thi là sử dụng module SIM 4G/5G. Module sẽ giao tiếp với embedded Linux thông qua UART hoặc USB và được Linux nhận diện như một modem/network interface.
+Khi kernel đã có driver hỗ trợ, hệ thống sẽ tạo các interface như:
+ttyUSB0
+wwan0
+ppp0
+Sau đó Linux dùng:
+•	AT Command 
+•	PPP 
+•	QMI 
+•	MBIM 
+•  AT Command dùng để gửi lệnh điều khiển modem. 
+•  PPP dùng để tạo kết nối mạng qua modem serial. 
+•  QMI và MBIM là giao thức hiện đại cho modem LTE/5G giúp tốc độ và hiệu năng tốt hơn PPP.
+để thiết lập kết nối mạng và truy cập Internet.
+```
