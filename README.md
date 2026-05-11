@@ -75,7 +75,8 @@ arch/arm/boot/dts/*.dtb
 ---
 ## 4G Lite trên lichee pi nano
 ```
-Board không có Ethernet và WiFi nên một hướng kết nối Internet khả thi là sử dụng module SIM 4G/5G. Module sẽ giao tiếp với embedded Linux thông qua UART hoặc USB và được Linux nhận diện như một modem/network interface.
+Board không có Ethernet và WiFi nên một hướng kết nối Internet khả thi là sử dụng module SIM 4G/5G. 
+Module sẽ giao tiếp với embedded Linux thông qua UART hoặc USB và được Linux nhận diện như một modem/network interface.
 Khi kernel đã có driver hỗ trợ, hệ thống sẽ tạo các interface như:
 ttyUSB0
 wwan0
